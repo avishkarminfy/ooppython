@@ -1,3 +1,4 @@
+#Easy question 1:
 class Rectangle:
     def __init__(self, width, height):
         self.width = width
@@ -9,7 +10,12 @@ class Rectangle:
     def perimeter(self):
         return 2 * (self.width + self.height)
 
+rect = Rectangle(5, 10)
+print("Area:", rect.area())
+print("Perimeter:", rect.perimeter())
+print()
 
+#Easy question 2:
 class Counter:
     def __init__(self):
         self.value = 0
@@ -23,7 +29,17 @@ class Counter:
     def reset(self):
         self.value = 0
 
+counter = Counter()
+counter.increment()
+counter.increment()
+print(counter.value)
+counter.decrement()
+print(counter.value)
+counter.reset()
+print(counter.value)
+print()
 
+#Medium Question 1:
 class Vehicle:
     def __init__(self, make, model, year):
         self.make = make
@@ -36,7 +52,12 @@ class Car(Vehicle):
         self.doors = doors
         self.fuel_type = fuel_type
 
+car = Car("Toyota", "Corolla", 2020, 4, "Gasoline")
+print("Make:", car.make)
+print("Doors:", car.doors)
+print()
 
+#Medium Question 2:
 class BankAccount:
     def __init__(self, account_number, balance):
         self.__account_number = account_number
@@ -55,28 +76,7 @@ class BankAccount:
 
     def get_account_number(self):
         return self.__account_number
-
-rect = Rectangle(5, 10)
-print("Area:", rect.area())
-print("Perimeter:", rect.perimeter())
-print()
-
-counter = Counter()
-counter.increment()
-counter.increment()
-print(counter.value)
-counter.decrement()
-print(counter.value)
-counter.reset()
-print(counter.value)
-print()
-
-
-car = Car("Toyota", "Corolla", 2020, 4, "Gasoline")
-print("Make:", car.make)
-print("Doors:", car.doors)
-print()
-
+    
 account = BankAccount("123456", 1000)
 print("Initial Balance:", account.get_balance())
 account.deposit(500)
